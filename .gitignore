@@ -1,0 +1,27 @@
+# Gradle
+# --------
+.gradle
+build
+local.properties
+classes
+gen
+
+# IntelliJ IDEA
+# -------------
+.shelf
+out
+.idea
+.iml
+
+# Eclipse
+# --------
+bin
+.settings
+.project
+.classpath
+.factorypath
+
+# Node
+# --------
+node_modules
+
