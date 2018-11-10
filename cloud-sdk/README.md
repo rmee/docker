@@ -11,6 +11,6 @@ Tooling to access various cloud environments.
 
 ## Steps to publish
 
-docker build azure-cli-kubectl -t remmeier/cloud-sdk:0.1.0
+docker build cloud-sdk -t remmeier/cloud-sdk:0.1.1
 docker login
-docker push remmeier/cloud-sdk:0.1.0
+docker push remmeier/cloud-sdk:0.1.1
