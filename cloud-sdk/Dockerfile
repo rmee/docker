@@ -25,10 +25,12 @@ RUN curl -L http://storage.googleapis.com/kubernetes-helm/${HELM_FILENAME} > ${H
     rm -f ${HELM_FILENAME}
 
 
-
 FROM google/cloud-sdk:224.0.0
 COPY --from=build /tmp/linux-amd64/helm /bin/helm
 COPY --from=build /opt/gradle /opt/gradle
+
+RUN curl -L https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 > /bin/cloud_sql_proxy && \
+    chmod a+x /bin/cloud_sql_proxy
 
 RUN apt-get -qqy update && apt-get install -qqy \
         openjdk-8-jre
